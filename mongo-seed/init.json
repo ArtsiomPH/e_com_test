@@ -1,0 +1,19 @@
+[
+  {
+    "name": "UserForm",
+    "username": "text",
+    "birthdate": "date"
+  },
+  {
+    "name": "OrderForm",
+    "reg_date": "date",
+    "customer": "text",
+    "customer_tel": "phone"
+  },
+  {
+    "name": "UserFormExtend",
+    "username": "text",
+    "birthdate": "date",
+    "email": "email"
+  }
+]
