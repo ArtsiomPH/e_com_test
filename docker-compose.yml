@@ -20,7 +20,7 @@ services:
 
   web:
     build:
-      context: ..
+      context: .
     command: uvicorn src.main:app --host 0.0.0.0 --port 8000
     container_name: fastapp
     depends_on:

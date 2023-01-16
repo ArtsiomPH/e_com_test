@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Body, Request
 
-from e_com_test.src.db import forms_collection
-from e_com_test.src.validators import is_date, is_email, is_phone_number
+from .db import forms_collection
+from .validators import is_date, is_email, is_phone_number
 
 app = FastAPI()
 
