@@ -1,0 +1,34 @@
+version: '3.11'
+
+services:
+
+  mongodb:
+    command: mongod --noauth
+    container_name: mongodb
+    image: mongo
+    environment:
+      MONGO_INITDB_DATABASE: test-form
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo:/data/db
+
+  mongo-seed:
+    build: ./mongo-seed
+    depends_on:
+      - mongodb
+
+  web:
+    build:
+      context: .
+    command: uvicorn src.main:app --host 0.0.0.0 --port 8000
+    container_name: fastapp
+    depends_on:
+      - mongodb
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app/
+
+volumes:
+  mongo:

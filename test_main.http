@@ -1,0 +1,41 @@
+# Test your FastAPI endpoints
+
+GET http://0.0.0.0:8000/forms
+Accept: application/json
+
+###
+
+POST http://0.0.0.0:8000/forms
+Content-Type: application/json
+
+{"name": "order_template",
+  "username": "text",
+  "creation_date": "date",
+  "birthdate": "date"}
+
+###
+
+POST http://0.0.0.0:8000/get_form?username=alex&birthdate=12.04.1998
+Content-Type: application/json
+
+###
+
+POST http://0.0.0.0:8000/get_form?username=alex&birthdate=12.04.1998tel=+7 333 333 22 22
+Content-Type: application/json
+
+###
+
+POST http://0.0.0.0:8000/get_form?username=alex&birthdate=12.04.1998&email=user@gmail.com
+Content-Type: application/json
+
+###
+
+POST http://0.0.0.0:8000/get_form?reg_date=11.01.2023&customer=alex&customer_tel=+7 333 333 22 22
+Content-Type: application/json
+
+###
+
+POST http://0.0.0.0:8000/get_form?title=god_of_war&publication_date=2018-04-20
+Content-Type: application/json
+
+###
