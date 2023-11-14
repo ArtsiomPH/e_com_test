@@ -1,5 +1,5 @@
-# e_com_test
-Test task solution for e.Com.
+# test
+Test task solution.
 
 Проект упакован в докер контейнер. 
 Cборка:
